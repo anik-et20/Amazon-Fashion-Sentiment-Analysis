@@ -49,7 +49,7 @@ The dataset is not included in this repository due to its large size.
 
 | Model                   | Accuracy |
 | ----------------------- | -------- |
-| Multinomial Naive Bayes | 82%      |
+| Multinomial Naive Bayes | 85%      |
 | Logistic Regression     | 87%      |
 
 **Final Selected Model:** Logistic Regression
