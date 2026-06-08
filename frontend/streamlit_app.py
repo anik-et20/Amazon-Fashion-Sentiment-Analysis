@@ -76,6 +76,50 @@ if analyze:
             )
 
             st.progress(float(confidence))
+            st.divider()
+
+            if sentiment.lower() == "positive":
+                st.success("😊 Positive Review")
+
+            elif sentiment.lower() == "negative":
+                st.error("😞 Negative Review")
+
+            else:
+                st.warning("😐 Neutral Review")
+
+            st.metric(
+                label="Confidence",
+                value=f"{confidence:.2%}"
+            )
+
+            st.progress(float(confidence))
+
+            # Review Statistics
+            st.subheader("📈 Review Statistics")
+
+            col1, col2 = st.columns(2)
+
+            col1.metric(
+                "Words",
+                len(review.split())
+            )
+
+            col2.metric(
+                "Characters",
+                len(review)
+            )
+
+            # Estimated Rating
+            st.subheader("⭐ Estimated Rating")
+
+            if sentiment.lower() == "positive":
+                st.write("⭐⭐⭐⭐ - ⭐⭐⭐⭐⭐")
+
+            elif sentiment.lower() == "negative":
+                st.write("⭐ - ⭐⭐")
+
+            else:
+                st.write("⭐⭐⭐")
 
         except Exception as e:
             st.error(f"Error: {e}")
