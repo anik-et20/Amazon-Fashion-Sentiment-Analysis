@@ -19,7 +19,7 @@ The project includes:
 
 **Amazon Fashion Reviews Dataset**
 
-* Approximately 2.3 Million customer reviews
+* Approximately 2.5 Million customer reviews
 * Fields used:
 
   * Rating
